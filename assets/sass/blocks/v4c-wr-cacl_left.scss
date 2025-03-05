@@ -1,0 +1,82 @@
+.v4c-left {
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .v4c-help-lo {
+        margin-top: 40px;
+    }
+
+    .help_block {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .file_icon {
+            margin-top: 20px;
+        }
+
+        .arrow_icon {
+            width: 40px;
+            margin-top: 14px;
+        }
+    }
+
+    .form--title {
+        display: block;
+
+        h4 {
+            text-align: center;
+            color: red;
+        }
+    }
+}
+
+.v4c-title {
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+    color: $white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.v4c-left_desc {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    &_main {
+        margin-top: 16px;
+        p {
+            margin:  14px 0;
+            color: $text-default;
+        }
+    }
+}
+
+.v4c-left_warning {
+    font-size: 18px;
+    text-align: center;
+}
+
+.v4c-left_proeb {
+    color: red;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.v4c-left_desc p {
+    font-size: 14px;
+    line-height: 1.4;
+}

@@ -1,0 +1,23 @@
+.fags-home {
+    margin-top: 140px;
+
+    &_desc {
+        margin: 30px auto 0 auto;
+        max-width: 440px;
+        text-align: center;
+
+        p {
+            color: $default-text;
+            line-height: 1.4;
+        }
+    }
+}
+
+.fags-items {
+    margin-top: 80px;
+
+    &_ul {
+        display: grid;
+        gap: 10px;
+    }
+}

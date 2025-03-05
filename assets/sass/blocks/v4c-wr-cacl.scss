@@ -1,0 +1,22 @@
+.v4c-wrapper {
+    margin-top: 25px;
+}
+
+.v4c-row {
+    display: flex;
+    gap: 60px;
+}
+
+.v4c-cont-position {
+    position: relative;
+}
+
+.new-calculator {
+    position: relative;
+}
+
+@media(max-width: 1023px) {
+    .v4c-row {
+        flex-direction: column;
+    }
+}

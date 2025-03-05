@@ -1,0 +1,20 @@
+{
+  "exchange": "Обменять",
+  "reviews": "Отзывы",
+  "partners": "Партнерам",
+  "rules": "Правила",
+  "kyc_aml": "KYC/AML",
+  "news": "Новости",
+  "faq": "FAQ",
+  "contacts": "Контакты",
+  "sign": "Войти",
+  "reg": "Создать аккаунт",
+  "profile": "Профиль",
+  "requests": "Заявки на обмен",
+  "requisites": "Реквизиты",
+  "api": "API",
+  "affiliate": "Партнерская программа",
+  "exit": "Выход",
+  "time_top": "Час роботи",
+			"time_bot": "Без вихідних"
+}

@@ -1,0 +1,16 @@
+.registration {
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  li {
+    @include respond-to(tablet) {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

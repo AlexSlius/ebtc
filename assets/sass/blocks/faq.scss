@@ -1,0 +1,79 @@
+.faq {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  &-top {
+    &-wr {
+      background-position-y: -0.5rem;
+    }
+  }
+
+  &-qst {
+    margin-bottom: 2.5rem;
+
+    li {
+      cursor: pointer;
+      margin-bottom: 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// new
+.faq-qst-title {
+  border-radius: 12px;
+  border: 1px solid #27275E;
+  background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%), #D9D9D9;
+  padding: 24px 24px;
+  color: $white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 90%;
+  cursor: pointer;
+  position: relative;
+  padding-right: 70px;
+
+  .faq-qst-arr {
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.b-toggle {
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #27275E;
+  background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%), #D9D9D9;
+  padding: 10px 24px;
+  color: $default-text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+
+  span {
+    background: transparent !important;
+  }
+
+  p,
+  span,
+  li {
+    color: $default-text !important;
+  }
+
+  &>div {
+    margin: 14px 0;
+  }
+}
