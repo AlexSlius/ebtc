@@ -108,18 +108,7 @@
   &:hover {
     color: #FFFFFF;
     background: $primary-h;
-
   }
-
-
-  /*    background: rgba(117,196,28,1);
-  background: -moz-linear-gradient(left, rgba(117,196,28,1) 0%, rgba(64,178,121,1) 60%, rgba(45,175,153,1) 75%, rgba(38,174,169,1) 90%, rgba(38,174,169,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(117,196,28,1)), color-stop(60%, rgba(64,178,121,1)), color-stop(75%, rgba(45,175,153,1)), color-stop(90%, rgba(38,174,169,1)), color-stop(100%, rgba(38,174,169,1)));
-  background: -webkit-linear-gradient(left, rgba(117,196,28,1) 0%, rgba(64,178,121,1) 60%, rgba(45,175,153,1) 75%, rgba(38,174,169,1) 90%, rgba(38,174,169,1) 100%);
-  background: -o-linear-gradient(left, rgba(117,196,28,1) 0%, rgba(64,178,121,1) 60%, rgba(45,175,153,1) 75%, rgba(38,174,169,1) 90%, rgba(38,174,169,1) 100%);
-  background: -ms-linear-gradient(left, rgba(117,196,28,1) 0%, rgba(64,178,121,1) 60%, rgba(45,175,153,1) 75%, rgba(38,174,169,1) 90%, rgba(38,174,169,1) 100%);
-  background: linear-gradient(to right, rgba(117,196,28,1) 0%, rgba(64,178,121,1) 60%, rgba(45,175,153,1) 75%, rgba(38,174,169,1) 90%, rgba(38,174,169,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75c41c', endColorstr='#26aea9', GradientType=1 );*/
 }
 
 .btn-plain {
@@ -360,5 +349,46 @@ a {
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+.news-bloc-wr-link {
+  margin-top: 15px;
+  display: flex;
+}
+
+.btn-ne-type-o {
+  border-radius: 7px;
+  border: 0.5px solid #98C9FF;
+  background: linear-gradient(139deg, #0FF 19.54%, #00C8E0 52.33%, #0096A5 85.11%);
+  padding: 11px 24px;
+  text-align: center;
+  color: #08031A;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-new-all {
+  border-radius: 7px;
+  border: 1px solid #0FF;
+  text-align: center;
+  color: $white;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 16px 23px;
+
+  &:hover {
+    opacity: 0.8;
   }
 }

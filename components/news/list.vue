@@ -14,34 +14,35 @@
             </div> -->
           </div>
         </div>
-        <div :class="['news-bloc', { 'news-bloc_new': !pagination }]">
-          <ul :style="{ opacity: load ? 1 : 0.5 }">
-            <li v-for="news in news.slice(0, limit)" :key="news._id" :style="news.title && load
+        <div :class="[{ 'news-bloc_new': !pagination }]">
+          <ul :style="{ display: load ? 1 : 0.5 }">
+            <li class="news-item" v-for="news in news.slice(0, limit)" :key="news._id" :style="news.title
               ? { cursor: 'pointer' }
-              : { background: '#EEE', transition: 'all .3s', minHeight: '370px', borderRadius: '5px' }
+              : { background: '#EEE', transition: 'all .3s', minHeight: '370px' }
               " @click="$router.push(localePath(`/news/${news.link}/`))">
               <div class="news-bloc-img">
-                <nuxt-link v-if="news.image && load" :to="localePath(`/news/${news.link}/`)">
+                <nuxt-link v-if="news.image" :to="localePath(`/news/${news.link}/`)">
                   <img :src="$rest.urlImg(news.image).original" alt="" />
                 </nuxt-link>
               </div>
 
-              <div v-if="news.title && load" class="news-bloc-info">
-                <span>{{ $t("page.news.category") }}</span>
+              <div v-if="news.title" class="news-bloc-info">
                 <p class="news-bloc-title">{{ news.title }}</p>
+                <div class="news-bloc-categor">{{ news.description }}</div>
+                <div class="news-bloc-wr-link">
+                  <nuxt-link :to="localePath(`/news/${news.link}/`)" class="btn-ne-type-o">Детальніше</nuxt-link>
+                </div>
 
+                <!--  {{ $t("page.news.category") }} -->
                 <!--<div class="news-bloc-info_item">
-
                 <div class="news-bloc-info_item-photo-name">
                   <div class="news-bloc-info_item-photo">
                     <img src="~assets/img/user-main.svg" alt=""/>
                   </div>
-
                   <div class="news-bloc-info_item-name">
                     <p>{{ news.author && news.author.name ? news.author.name : "Admin"}}</p>
                     <span>{{ $moment(news.createdAt).format("DD MMM YYYY | HH:mm") }}</span>
                   </div>
-
                   <div class="news-bloc-info_item-data">
                 <span>
                   <img src="~assets/img/visible.svg" alt=""/>
@@ -49,12 +50,16 @@
                 </span>
                     <a href="" class="news-bloc-flag"><img src="~/assets/img/bookmark.svg" alt=""></a>
                   </div>
-
                 </div>
               </div> -->
               </div>
             </li>
           </ul>
+        </div>
+        <div class="news-wr-btn" v-if="!pagination">
+          <nuxt-link :to="localePath(`/news/`)" class="btn-new-all">
+            Переглянути всі
+          </nuxt-link>
         </div>
         <pagination v-if="pagination" :current-page="current_page" :total-pages="total_pages" @page-changed="getNewsFull({
           page: $event,
@@ -89,7 +94,10 @@ export default {
   watch: {
     lang() {
       this.getNewsFull({ lang: this.$root.$i18n.locale, limit: this.limit });
-    }
+    },
+    news(newNews) {
+      console.log("newNews: ", newNews);
+    },
   },
   created() {
     this.getNewsFull({ lang: this.$root.$i18n.locale, limit: this.limit });

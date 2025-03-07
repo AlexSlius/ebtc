@@ -1,11 +1,12 @@
 .pagination {
-  margin-top: 26px;
+  margin-top: 60px;
   margin-bottom: 26px;
 
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 7px;
   }
 
   li {
@@ -25,8 +26,6 @@
     width: 40px;
     height: 40px;
     line-height: 40px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     background-color: #e5e7ea;
     color: #9f9f9f;
@@ -36,7 +35,6 @@
     &.pagination-current {
       color: #212121;
       background-color: #ffffff;
-      box-shadow: 0 6px 35px 0 #d0d0d0;
     }
 
     &.pagination-ban {
