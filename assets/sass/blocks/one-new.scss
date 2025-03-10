@@ -9,7 +9,7 @@
 
     &-back {
       margin-top: 1.1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
 
       a {
         text-transform: uppercase;
@@ -21,7 +21,7 @@
 
     &-date {
       margin-top: 1.56rem;
-      padding-bottom: 5.25rem;
+      padding-bottom: 0;
       color: #9f9f9f;
 
       img {
@@ -33,18 +33,15 @@
   }
 
   &-info {
-
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 
     p {
-      color: #6a6f76;
       line-height: 24px;
       margin-bottom: 15px;
     }
 
     li {
-      color: #6a6f76;
       margin-bottom: 7px;
     }
 
@@ -86,9 +83,8 @@
   }
 
   &_bg {
-    background: #f4f5f7;
-    padding-bottom: 5rem;
-    padding-top: 4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   &_comments {

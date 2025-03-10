@@ -10,53 +10,24 @@
     margin-top: 0;
   }
 
-  &::after,
-  &::before {
-    position: absolute;
-    z-index: 0;
-  }
-
-  div {
-    position: relative;
-    z-index: 1;
-    border-radius: 75px 75px 75px 75px;
-  }
-
-  .title-other {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 36px;
-    font-family: $ffPlay_Light;
-    font-weight: 400;
-  }
-
   ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 -1%;
-    margin-top: 23px;
+    margin-top: 80px;
 
     @include respond-to(phone) {
       justify-content: center;
-
     }
   }
 
   li {
-    width: 31.2%;
-    margin: .45rem 1%;
+    width: 29.6%;
     position: relative;
-    min-width: 300px;
     flex: 1 0;
-    max-width: 31.2%;
-
-    @include respond-to(tablet) {
-      max-width: 48%;
-    }
+    max-width: 29.6%;
   }
 
   b {
@@ -82,9 +53,10 @@
 
   ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     flex-direction: row;
+    gap: 30px;
     flex-wrap: wrap;
     margin: 0 -1%;
     margin-top: 23px;
@@ -96,9 +68,8 @@
 
   li {
     width: 31.2%;
-    margin: .45rem 1%;
+    min-width: 31.2%;
     position: relative;
-    min-width: 300px;
     flex: 1 0;
     max-width: 31.2%;
 
@@ -202,7 +173,6 @@
     }
 
     span {
-      //margin-left: 20px;
       text-transform: uppercase;
     }
 
@@ -217,7 +187,6 @@
     }
 
     .order-reserves {
-
       -webkit-transition: .35s all;
       -moz-transition: .35s all;
       -ms-transition: .35s all;
@@ -245,9 +214,7 @@
       -o-transition: .35s all;
       transition: .35s all;
     }
-
   }
-
 }
 
 .news-page-top {
@@ -373,123 +340,10 @@
   }
 }
 
-.reviews-bloc {
-  &::after {
-    content: url("~assets/img/right-waves.svg");
-    left: 0;
-    bottom: 31.4%;
-
-    @include respond-to(tablet) {
-      bottom: 26.4%;
-    }
-  }
-
-
-  li {
-    border-radius: 8px;
-
-  }
-
-  @include respond-to(phone) {
-    display: none;
-  }
-
-
-  &-txt {
-    padding: 18px 25px;
-    background-color: #F4F7F9;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-top: 25px solid #F4F7F9;
-      border-right: 25px solid transparent;
-      bottom: -25px;
-    }
-
-    p {
-      font-size: 14px;
-      position: relative;
-      text-align: left;
-      color: $default-text;
-      z-index: 1;
-      line-height: 16.41px;
-
-      &.reviews-bloc-date {
-        font-size: 12px;
-        text-align: center;
-        //margin-top: 12px;
-      }
-
-
-    }
-  }
-
-  &__ {
-    height: 70px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-
-  &-date {
-    color: $dark-gray;
-    text-transform: uppercase;
-
-    &::before {
-      content: url("~assets/img/line-news.svg");
-      width: 167px
-    }
-  }
-
-  &-client {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 41px;
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    span {
-      color: #fac917;
-      margin-right: 3px;
-    }
-  }
-
-  &-photo {
-    text-align: center;
-    overflow: hidden;
-    margin-right: 17px;
-    margin-left: 8px;
-    padding: 3px;
-
-    p {
-      font-size: 14px;
-      color: $default-text;
-    }
-
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-}
-
 // new 
 .news-bloc .zayvki-filter-main-new {
   border-radius: 0;
-  margin: 140px 0 0 0;
+  margin: 10px 0 0 0;
 
   .zayvki-filter-main--top {
     justify-content: center;
@@ -529,4 +383,63 @@
   justify-content: center;
   display: flex;
   margin-top: 40px;
+}
+
+// new
+.reviews-bloc-txt {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #27275E;
+  min-height: 110px;
+  position: relative;
+
+  p {
+    color: $white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .rew-icon-top,
+  .rew-icon-bot {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 4;
+  }
+
+  .rew-icon-top {
+    top: -12px;
+    left: 15px;
+  }
+
+  .rew-icon-bot {
+    right: 15px;
+    bottom: -12px;
+  }
+}
+
+.reviews-bloc-client {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .reviews-bloc-photo {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  p {
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+  }
 }

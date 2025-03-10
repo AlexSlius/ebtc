@@ -1,11 +1,6 @@
-
 .form_reviews-new {
-
   margin-top: 4rem;
   width: 100%;
-  -webkit-box-shadow: 0 5px 30px 0 #e3e3e4;
-  -moz-box-shadow: 0 5px 30px 0 #e3e3e4;
-  box-shadow: 0 5px 30px 0 #e3e3e4;
 
   .title {
     margin-bottom: .9rem;
@@ -20,7 +15,8 @@
       padding: 0 1rem 1rem;
     }
 
-    &::after, &::before {
+    &::after,
+    &::before {
       position: absolute;
       z-index: 0;
       opacity: .1;
@@ -48,7 +44,8 @@
     margin: auto;
   }
 
-  input, textarea {
+  input,
+  textarea {
     margin: 10px 0 0;
     border-radius: 20px;
     padding: 10px 35px 10px 15px;
@@ -57,22 +54,26 @@
     width: 100%;
     background-color: #f4f5f7;
 
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
       font-style: italic;
       color: #9f9f9f;
     }
 
-    &::-moz-placeholder { /* Firefox 19+ */
+    &::-moz-placeholder {
+      /* Firefox 19+ */
       font-style: italic;
       color: #9f9f9f;
     }
 
-    &:-ms-input-placeholder { /* IE 10+ */
+    &:-ms-input-placeholder {
+      /* IE 10+ */
       font-style: italic;
       color: #9f9f9f;
     }
 
-    &:-moz-placeholder { /* Firefox 18- */
+    &:-moz-placeholder {
+      /* Firefox 18- */
       font-style: italic;
       color: #9f9f9f;
     }

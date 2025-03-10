@@ -4,7 +4,7 @@
       <div class="popup-close-bloc popup-close-bloc-personal-room" @click.self="$emit('close')" />
       <div class="popup-wr-item">
         <div class="modal-header">
-          <h5 class="title text-center">
+          <h5 class="title title-col text-center">
             {{ reset ? $t("modals.login.password_recovery") : $t("modals.login.login") }}
           </h5>
           <span class="popup-close-btn popup-close-btn-personal-room" @click.self="$emit('close')">
@@ -380,7 +380,7 @@ export default {
 }
 
 .popup-wr-item {
-  max-width: 300px;
+  max-width: 400px;
   box-shadow: none;
   border-radius: 10px;
 }

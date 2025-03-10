@@ -85,11 +85,12 @@
 }
 
 .btn-blue {
-  @include line-height(12, 38);
-  background-color: $primary;
+  border-radius: 7px;
+  border: none;
+  background: linear-gradient(97deg, #0FF -10.46%, #00C8E0 77.33%, #0096A5 153.11%);
 
   &:hover {
-    background: $primary-h;
+    opacity: 0.8;
   }
 }
 
@@ -99,15 +100,10 @@
   padding-right: 30px;
   padding-left: 30px;
 
-  -webkit-box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-  -moz-box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-  box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-
-  background: $primary;
+  background: linear-gradient(97deg, #0FF -10.46%, #00C8E0 77.33%, #0096A5 153.11%);
 
   &:hover {
-    color: #FFFFFF;
-    background: $primary-h;
+    opacity: 0.8;
   }
 }
 
@@ -161,15 +157,13 @@
   color: $dark-gray;
   font-family: $ffRoboto_Regular;
   font-weight: 400;
-  background: #E1E7ED;
-
-
   min-width: 104px;
+  color: #fff;
+  background: linear-gradient(97deg, #0FF -10.46%, #00C8E0 77.33%, #0096A5 153.11%);
 
   &:hover {
-    background: #E6E9F5FF;
+    opacity: 0.8;
   }
-
 }
 
 

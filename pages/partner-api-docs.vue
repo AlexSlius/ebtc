@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <div class="container p20 item-page">
+    <div class="p20 item-page">
       <h4 class="title">
         {{ $t('page.partner_api.subtitle-1') }}
       </h4>

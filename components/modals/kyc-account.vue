@@ -4,7 +4,7 @@
       <div class="popup-close-bloc popup-close-bloc-personal-room" @click.self="$emit('close')" />
       <div class="popup-wr-item kyc-modal">
         <div class="modal-header">
-          <h5 class="title text-center">
+          <h5 class="title text-center title-col">
             Verification process
           </h5>
           <span class="popup-close-btn popup-close-btn-personal-room" @click.self="$emit('close')">

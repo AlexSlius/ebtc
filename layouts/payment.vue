@@ -1,12 +1,9 @@
 <template>
   <div class="transs-wr">
     <div class="transs">
-      <!--      <headline />-->
-<!--      <div>-->
       <div @click="menuAllChange(false)">
         <nuxt />
       </div>
-<!--      </div>-->
     </div>
     <notify />
   </div>
@@ -15,9 +12,8 @@
 <script>
 import Vue from "vue";
 import headline from "~/components/header";
-import footerBlock from "~/components/footer/footer";
 import support from "~/components/footer/support";
-import {mapActions, mapGetters, mapMutations} from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 import login from "~/components/modals/login";
 import reg from "~/components/modals/reg";
 import qr from "~/components/modals/modal/index";
@@ -30,7 +26,6 @@ import VueJivosite from "@bchteam/vue-jivosite";
 export default {
   components: {
     headline,
-    footerBlock,
     support,
     login,
     reg,
@@ -116,7 +111,7 @@ export default {
       return null; //no-ssr
     }
     if (this.getJivoSite) {
-      Vue.use(VueJivosite, {widgetId: this.getJivoSite});
+      Vue.use(VueJivosite, { widgetId: this.getJivoSite });
     }
   },
   mounted() {

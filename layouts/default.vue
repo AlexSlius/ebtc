@@ -6,7 +6,7 @@
         <div class="main">
           <nuxt />
         </div>
-        <support v-if="!isStatusCode && showSupport" />
+        <!-- <support v-if="!isStatusCode && showSupport" /> -->
       </div>
       <footerBlock @click="menuAllChange(false)" />
     </div>
@@ -52,7 +52,7 @@
 import Vue from "vue";
 import headline from "~/components/header";
 import footerBlock from "~/components/footer/footer";
-import support from "~/components/footer/support";
+// import support from "~/components/footer/support";
 import {mapActions, mapGetters, mapMutations} from "vuex";
 import login from "~/components/modals/login";
 import reg from "~/components/modals/reg";
@@ -74,7 +74,7 @@ export default {
     KycAccount,
     headline,
     footerBlock,
-    support,
+    // support,
     login,
     reg,
     notify,

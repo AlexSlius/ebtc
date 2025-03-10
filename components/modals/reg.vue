@@ -4,7 +4,7 @@
       <div class="popup-close-bloc" @click.self="$emit('close')" />
       <div class="popup-wr-item">
         <div class="modal-header text-center">
-          <h5 class="title text-center">
+          <h5 class="title title-col text-center">
             {{ $t("modals.sign_up.sign_up") }}
           </h5>
           <span class="popup-close-btn" @click.self="$emit('close')">&times;</span>
@@ -280,9 +280,7 @@ export default {
 
 .popup-wr-item {
   box-shadow: none;
-  /*width: 100%;*/
   max-width: 550px;
-  /*box-shadow: none;*/
   border-radius: 10px;
 }
 

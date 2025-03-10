@@ -62,14 +62,13 @@
     }
 
     &-item {
-      //box-shadow: 0 25px 50px 0 rgba(23, 22, 37, 0.15);
       width: 94%;
       max-width: 450px;
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
       border-radius: 30px;
 
-      padding-top: 22px;
+      padding-top: 40px;
 
       margin: 1rem auto;
       z-index: 10;
@@ -140,7 +139,6 @@
   }
 
   &-close {
-
     &-bloc {
       position: fixed;
       left: 0;
@@ -148,13 +146,12 @@
       height: 100%;
       width: 100%;
       z-index: 9;
-      //background-color: rgba(0, 0, 0, 0.50);
     }
 
     &-btn {
       position: absolute;
       right: 13px;
-      top: -18px;
+      top: -36px;
       cursor: pointer;
       color: #9F9F9F;
       font-size: 28px;
@@ -346,6 +343,7 @@
     p {
       font-size: 15px;
       line-height: 20px;
+      color: $gray;
     }
 
     a {

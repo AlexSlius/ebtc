@@ -1,5 +1,5 @@
 <template>
-  <div class="container container-dashed partner-block">
+  <div class="container container-dashed">
     <div v-if="partnersArray.length" class="our-partner">
 
       <ul>

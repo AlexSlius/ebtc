@@ -57,7 +57,7 @@ body {
   background-color: #08031A;
   font-family: $ffRoboto_Regular;
   font-size: 14px;
-  color: $dark;
+  color: $default-text;
   overflow-x: hidden;
 
   display: flex;
@@ -80,6 +80,7 @@ img {
 p {
   font-family: $ffRoboto_Medium;
   font-weight: 500;
+  line-height: 1.6;
 }
 
 a,
@@ -162,6 +163,7 @@ a,
 li {
   margin: 0;
   padding: 0;
+  line-height: 1.4;
 }
 
 h4 {
@@ -205,7 +207,7 @@ h1 {
 p {
   color: $default-text;
   font-weight: 400;
-  line-height: 12px;
+  line-height: 1.6;
   font-family: $ffRoboto_Regular;
 }
 
@@ -214,11 +216,18 @@ p {
   text-transform: initial;
   font-weight: 400;
   font-family: $ffPlay_Light;
+  margin: 20px 0;
+  color: $default-text;
 
   @include respond-to(phone) {
     font-size: 1.5rem;
     text-align: center;
   }
+}
+
+.title-col {
+  color: $dark;
+  font-size: 25px;
 }
 
 ul,

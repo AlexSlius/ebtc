@@ -217,6 +217,7 @@
         "reserve": "Reserva:",
         "rate": "Tipo de cambio:"
       },
+      "button_show_all": "Переглянути всі",
       "details": {
         "choose": "Introduzca datos para finalizar el cambio",
         "title": "Introducción de datos",

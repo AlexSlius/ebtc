@@ -327,7 +327,7 @@
 }
 
 .form {
-  background: #ffffff;
+  background: #cce5ff;
   border-radius: 30px;
   width: 105%;
   margin: 2.25rem auto 3.75em;
@@ -351,7 +351,6 @@
   }
 
   &-ruls {
-    background: $bacTxt;
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom-left-radius: 20px;
@@ -359,6 +358,7 @@
 
     p {
       font-size: 15px;
+      color: $dark;
 
       @include respond-to(phone) {
         font-size: 13px;

@@ -1,20 +1,17 @@
-
 .faq-top {
   margin-top: 2.5rem;
-  //margin-bottom: 6rem;
-
 
   ul {
     display: flex;
     flex-wrap: wrap;
     padding: 9px;
+
     @include respond-to(tablet) {
       justify-content: space-between;
     }
   }
 
   li {
-    //align-content: center;
     padding: .43rem;
     margin: .43rem;
 
@@ -44,16 +41,16 @@
     align-items: center;
     font-family: $ffRoboto_Regular;
     font-size: 15px;
-    color: $dark;
+    color: $default-text;
 
-    img{
+    img {
       flex: 0 0 auto;
     }
 
-    &:hover, &.profile-nav-active {
+    &:hover,
+    &.profile-nav-active {
       color: $primary;
       font-family: $ffRoboto_Medium;
-
     }
   }
 
@@ -66,7 +63,6 @@
 }
 
 .faq-top {
-
   ul {
     margin: 0 -.94rem;
   }
@@ -94,22 +90,26 @@
       -moz-border-radius: 20px;
       line-height: 1.3;
 
-      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
         font-style: italic;
         color: #9f9f9f;
       }
 
-      &::-moz-placeholder { /* Firefox 19+ */
+      &::-moz-placeholder {
+        /* Firefox 19+ */
         font-style: italic;
         color: #9f9f9f;
       }
 
-      &:-ms-input-placeholder { /* IE 10+ */
+      &:-ms-input-placeholder {
+        /* IE 10+ */
         font-style: italic;
         color: #9f9f9f;
       }
 
-      &:-moz-placeholder { /* Firefox 18- */
+      &:-moz-placeholder {
+        /* Firefox 18- */
         font-style: italic;
         color: #9f9f9f;
       }
@@ -138,6 +138,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 9px;
+
     @include respond-to(tablet) {
       justify-content: space-between;
     }
@@ -175,7 +176,8 @@
     font-size: 15px;
     color: $dark;
 
-    &:hover, &.profile-nav-active {
+    &:hover,
+    &.profile-nav-active {
       color: $primary;
       font-family: $ffRoboto_Medium;
 
@@ -219,22 +221,26 @@
       -moz-border-radius: 20px;
       line-height: 1.3;
 
-      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
         font-style: italic;
         color: #9f9f9f;
       }
 
-      &::-moz-placeholder { /* Firefox 19+ */
+      &::-moz-placeholder {
+        /* Firefox 19+ */
         font-style: italic;
         color: #9f9f9f;
       }
 
-      &:-ms-input-placeholder { /* IE 10+ */
+      &:-ms-input-placeholder {
+        /* IE 10+ */
         font-style: italic;
         color: #9f9f9f;
       }
 
-      &:-moz-placeholder { /* Firefox 18- */
+      &:-moz-placeholder {
+        /* Firefox 18- */
         font-style: italic;
         color: #9f9f9f;
       }

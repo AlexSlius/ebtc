@@ -149,32 +149,13 @@ input:invalid {
 .swal2-actions .swal2-confirm.swal2-styled {
   padding-right: 30px;
   padding-left: 30px;
-
-  -webkit-box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-  -moz-box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-  box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-
+  background: linear-gradient(139deg, #0FF 19.54%, #00C8E0 52.33%, #0096A5 85.11%)!important;
   color: #ffffff;
-  background-color: rgba(117, 196, 28, 1);
-  background: -moz-linear-gradient(45deg, rgba(117, 196, 28, 1) 0%, rgba(64, 178, 121, 1) 60%, rgba(45, 175, 153, 1) 75%, rgba(38, 174, 169, 1) 90%, rgba(38, 174, 169, 1) 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(117, 196, 28, 1)), color-stop(60%, rgba(64, 178, 121, 1)), color-stop(75%, rgba(45, 175, 153, 1)), color-stop(90%, rgba(38, 174, 169, 1)), color-stop(100%, rgba(38, 174, 169, 1)));
-  background: -webkit-linear-gradient(45deg, rgba(117, 196, 28, 1) 0%, rgba(64, 178, 121, 1) 60%, rgba(45, 175, 153, 1) 75%, rgba(38, 174, 169, 1) 90%, rgba(38, 174, 169, 1) 100%);
-  background: -o-linear-gradient(45deg, rgba(117, 196, 28, 1) 0%, rgba(64, 178, 121, 1) 60%, rgba(45, 175, 153, 1) 75%, rgba(38, 174, 169, 1) 90%, rgba(38, 174, 169, 1) 100%);
-  background: -ms-linear-gradient(45deg, rgba(117, 196, 28, 1) 0%, rgba(64, 178, 121, 1) 60%, rgba(45, 175, 153, 1) 75%, rgba(38, 174, 169, 1) 90%, rgba(38, 174, 169, 1) 100%);
-  background: linear-gradient(45deg, rgba(117, 196, 28, 1) 0%, rgba(64, 178, 121, 1) 60%, rgba(45, 175, 153, 1) 75%, rgba(38, 174, 169, 1) 90%, rgba(38, 174, 169, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#75c41c', endColorstr='#26aea9', GradientType=1);
+  border-radius: 7px;
+  border: none;
 
   &:hover {
-    color: #7fd21e;
-
-    background: rgba(102, 168, 27, 1);
-    background: -moz-linear-gradient(45deg, rgba(102, 168, 27, 1) 0%, rgba(55, 150, 103, 1) 60%, rgba(42, 156, 135, 1) 75%, rgba(34, 148, 142, 1) 90%, rgba(14, 140, 134, 1) 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(102, 168, 27, 1)), color-stop(60%, rgba(55, 150, 103, 1)), color-stop(75%, rgba(42, 156, 135, 1)), color-stop(90%, rgba(34, 148, 142, 1)), color-stop(100%, rgba(14, 140, 134, 1)));
-    background: -webkit-linear-gradient(45deg, rgba(102, 168, 27, 1) 0%, rgba(55, 150, 103, 1) 60%, rgba(42, 156, 135, 1) 75%, rgba(34, 148, 142, 1) 90%, rgba(14, 140, 134, 1) 100%);
-    background: -o-linear-gradient(45deg, rgba(102, 168, 27, 1) 0%, rgba(55, 150, 103, 1) 60%, rgba(42, 156, 135, 1) 75%, rgba(34, 148, 142, 1) 90%, rgba(14, 140, 134, 1) 100%);
-    background: -ms-linear-gradient(45deg, rgba(102, 168, 27, 1) 0%, rgba(55, 150, 103, 1) 60%, rgba(42, 156, 135, 1) 75%, rgba(34, 148, 142, 1) 90%, rgba(14, 140, 134, 1) 100%);
-    background: linear-gradient(45deg, rgba(102, 168, 27, 1) 0%, rgba(55, 150, 103, 1) 60%, rgba(42, 156, 135, 1) 75%, rgba(34, 148, 142, 1) 90%, rgba(14, 140, 134, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66a81b', endColorstr='#0e8c86', GradientType=1);
+    opacity: 0.8;
   }
 }
 
@@ -234,5 +215,21 @@ input::-webkit-inner-spin-button {
     z-index: -1;
     right: -16%;
     transform: translateY(-40%);
+  }
+}
+
+.fon-rev-home {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    top: -33vw;
+    height: 69vw;
+    background: url('~assets/img/fon-revie.png') center/contain no-repeat;
+    opacity: 0.6;
   }
 }

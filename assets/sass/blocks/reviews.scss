@@ -1,15 +1,10 @@
 .reviews {
 
   padding-top: 4rem;
-  //margin-bottom: 1rem;
   position: relative;
   overflow: hidden;
 
   &-top {
-
-    //margin-top: 2.0rem;
-    //padding-bottom: 5.0rem;
-
     &-wr {
       background-position-y: -0.5rem;
     }
@@ -127,7 +122,7 @@
           padding-right: 0;
         }
 
-        > span {
+        >span {
           font-size: 12px;
           color: #b6b6b6;
           display: inline-block;
@@ -138,11 +133,11 @@
           line-height: 24px;
         }
       }
-
-
     }
-
   }
+}
 
 
+.reviews-top {
+  margin-top: 40px;
 }

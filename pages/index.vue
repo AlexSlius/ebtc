@@ -52,10 +52,11 @@
     <faqs />
     <reserves />
     <news :limit="3" :pagination="false" />
-    <!-- <reviews /> -->
-    <!-- <div class="partner-block">
+    <div class="fon-rev-home"></div>
+    <reviews />
+    <div class="partner-block">
       <partner />
-    </div> -->
+    </div>
   </div>
 </template>
 

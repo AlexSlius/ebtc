@@ -58,7 +58,7 @@
         </div>
         <div class="news-wr-btn" v-if="!pagination">
           <nuxt-link :to="localePath(`/news/`)" class="btn-new-all">
-            Переглянути всі
+            {{ $t("page.main.button_show_all") }}
           </nuxt-link>
         </div>
         <pagination v-if="pagination" :current-page="current_page" :total-pages="total_pages" @page-changed="getNewsFull({

@@ -6,7 +6,7 @@
         &times;
       </span>
       <div class="popup-wr-item">
-        <h5 class="title text-center">{{ $t("page.user.profile.reset.title") }}</h5>
+        <h5 class="title title-col text-center">{{ $t("page.user.profile.reset.title") }}</h5>
         <div class="popup-top">
           <form action="">
             <div>
