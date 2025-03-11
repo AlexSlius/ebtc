@@ -1,4 +1,3 @@
-
 .form {
 
   &-confirmation-manual-bloc {
@@ -9,9 +8,8 @@
     flex-wrap: wrap;
     padding-bottom: .8em;
 
-
     @include respond-to(tablet-lend) {
-      > div {
+      >div {
         flex-grow: 1;
         justify-content: space-between;
       }
@@ -21,7 +19,7 @@
 
   &-confirmation-manual-number {
 
-    > p {
+    >p {
       color: #ffffff;
       font-size: 1.5em;
       margin-top: .5rem;

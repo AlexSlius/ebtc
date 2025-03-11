@@ -27,7 +27,7 @@
         <div>
           <form action class="form" onsubmit="return false;">
             <div class="contact-main-form">
-              <h4 class="title text-center">{{ $t("page.contacts.feedback") }}</h4>
+              <h4 class="title title-ne-form text-center">{{ $t("page.contacts.feedback") }}</h4>
               <p>
                 <input
                   v-model="email"

@@ -1,7 +1,7 @@
 <template>
   <form action="" class="form form_reviews-new">
     <div class="form_reviews-new_wr">
-      <h4 class="title text-center">{{ $t("page.reviews.form_send") }}</h4>
+      <h4 class="title title-ne-form text-center">{{ $t("page.reviews.form_send") }}</h4>
       <div class="form_reviews-new_base">
         <p>
           <input

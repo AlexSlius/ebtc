@@ -24,7 +24,7 @@
             <div class="title">{{ $t("page.news.news.comment") }}</div>
             <form action="" class="form form_reviews-new">
               <div class="form_reviews-new_wr">
-                <h4 class="title text-center">
+                <h4 class="title title-ne-form text-center">
                   {{ $t("page.news.news.comment") }}
                 </h4>
                 <div class="form_reviews-new_base">
