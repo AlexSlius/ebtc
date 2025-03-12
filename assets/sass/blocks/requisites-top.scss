@@ -12,9 +12,11 @@
   margin: 0 0 2.125rem;
   display: flex;
   justify-content: space-between;
-  //flex-wrap: wrap;
   flex-direction: row;
-  //align-items: center;
+
+  .title {
+    color: #282E38;
+  }
 
   &__btn-group {
 

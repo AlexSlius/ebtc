@@ -70,13 +70,14 @@
 
 .lang-list-wr {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(170% + 10px);
   left: 0;
   width: 140px;
   border: 8px;
   padding: 14px 0;
   border-radius: 12px;
   background: #cce5ff;
+  box-shadow: 6px 8px 17px -9px #000;
 
   a {
     background: #cce5ff;

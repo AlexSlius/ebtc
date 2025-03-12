@@ -1,9 +1,11 @@
 $fztxt: .875rem;
+
 .api {
   .container-api {
     margin: 3.3rem 6.6rem;
     display: flex;
     flex-direction: column;
+
     @include respond-to(phone) {
       margin: 0.5rem 1rem;
 
@@ -11,6 +13,7 @@ $fztxt: .875rem;
 
     h2 {
       margin-left: 0;
+
       @include respond-to(phone) {
         margin: auto;
       }
@@ -19,10 +22,8 @@ $fztxt: .875rem;
 
 
   &-block {
-    //padding-top: 2.75rem;
-    //margin-bottom: -2rem;
     padding-bottom: 3rem;
-    background: linear-gradient(to top, #f7f8fa, #ffffff);
+    background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%);
     color: #9f9f9f;
 
     &__main {
@@ -33,7 +34,7 @@ $fztxt: .875rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #ffffff;
+      background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%);
 
       @include respond-to(tablet-lend) {
         flex-wrap: wrap;
@@ -55,24 +56,23 @@ $fztxt: .875rem;
       border: 1px solid #f3f3f3;
       margin-top: 1.3125rem;
       margin-bottom: 2.3125rem;
-      background: #ffffff;
+      background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%);
 
       @include respond-to(phone) {
         padding: .5rem 1rem;
       }
-
 
       &--wr {
         -webkit-border-radius: 15px 15px 0 0;
         -moz-border-radius: 15px 15px 0 0;
         border-radius: 15px 15px 0 0;
         overflow: hidden;
-        background: #fbfbfb;
+        background: #464646;
       }
 
       &--h {
         padding: 15px;
-        background: #f3f3f3;
+        background: #464646;
 
         display: flex;
         align-items: center;
@@ -102,13 +102,13 @@ $fztxt: .875rem;
       .title__sub {
         margin: 2rem 0 .75rem;
         font-size: 1rem;
-        color: #212121;
+        color: #fff;
         text-transform: uppercase;
       }
 
       p {
         margin-bottom: .25rem;
-        line-height: 1.18;
+        line-height: 2.18;
         word-break: break-all;
       }
 
@@ -127,7 +127,8 @@ $fztxt: .875rem;
       }
     }
 
-    .title, .title__ {
+    .title,
+    .title__ {
       color: #212121;
     }
 
@@ -185,7 +186,8 @@ $fztxt: .875rem;
           }
         }
 
-        p, span {
+        p,
+        span {
           margin-bottom: 1.25rem;
 
           &.form__option__text {
@@ -241,6 +243,7 @@ $fztxt: .875rem;
       .key {
         display: flex;
         align-items: center;
+        color: #D6E2F3;
 
         img {
           width: 15px;
@@ -249,7 +252,7 @@ $fztxt: .875rem;
       }
 
       span {
-        color: #9f9f9f;
+        color: #D6E2F3;
       }
 
       .btn {
@@ -316,7 +319,7 @@ $fztxt: .875rem;
       thead {
 
         tr {
-          background: #f3f3f3;
+          background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%);
           border-top: none;
         }
 
@@ -339,17 +342,12 @@ $fztxt: .875rem;
 
       tr {
         border: 1px solid #f3f3f3;
-        background: #ffffff;
+        background: linear-gradient(180deg, #0D0D30 0%, #242452 116.79%);
       }
-
-
     }
-
   }
 
-
   &__info {
-    //color: #9f9f9f;
     margin-top: 1.5625rem;
     font-size: $fztxt;
   }
@@ -410,7 +408,7 @@ $fztxt: .875rem;
     margin: 0;
   }
 
-  input[type="checkbox"]:checked + .form__option__text:after {
+  input[type="checkbox"]:checked+.form__option__text:after {
     content: '';
     position: absolute;
     left: 5px;

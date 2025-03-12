@@ -2,55 +2,56 @@
   <div class="">
 
     <div class="container">
-      <div class="container news-page-top ">
+      <div class="news-page-top ">
         <h1>{{ $t('page.partner_api.title') }}</h1>
       </div>
-    </div>
 
-    <div class="p20 item-page">
-      <h4 class="title">
-        {{ $t('page.partner_api.subtitle-1') }}
-      </h4>
-      <div>
+      <div class="p20_top item-page">
+        <h4 class="title">
+          {{ $t('page.partner_api.subtitle-1') }}
+        </h4>
+        <div>
+          <b>
+            {{ $t('page.partner_api.text-1') }}</b>
+          <p>
+            {{ $t('page.partner_api.text-2') }}
+          </p>
+          <br />
+          <center>
+            <img v-if="lang == 'ru'" src="~/assets/img/partner-url.png" style="max-width: 900px" />
+            <img v-else src="~/assets/img/partner-url-en.png" style="max-width: 900px" />
+          </center>
+          <br />
+          <br />
+          <b>
+            {{ $t('page.partner_api.text-3') }}
+          </b>
+          <br />
+          <br />
+          <p>
+            {{ $t('page.partner_api.text-4') }}
+            <br />
+            {{ $t('page.partner_api.text-4-1') }} <b>{{ $rest.baseUrl }}/ref/XXXXXX/?cur_from=PMUSD&cur_to=BTC</b>
+          </p>
+        </div>
+        <br />
+        <br />
         <b>
-          {{ $t('page.partner_api.text-1') }}</b>
-        <p>
-          {{ $t('page.partner_api.text-2') }}
-        </p>
-        <br />
-        <center>
-          <img v-if="lang == 'ru'" src="~/assets/img/partner-url.png" style="max-width: 900px" />
-          <img v-else src="~/assets/img/partner-url-en.png" style="max-width: 900px" />
-        </center>
-        <br />
-        <br />
-        <b>
-          {{ $t('page.partner_api.text-3') }}
+          {{ $t('page.partner_api.text-5') }}
         </b>
         <br />
         <br />
-        <p>
-          {{ $t('page.partner_api.text-4') }}
-          <br />
-          {{$t('page.partner_api.text-4-1')}} <b>{{ $rest.baseUrl }}/ref/XXXXXX/?cur_from=PMUSD&cur_to=BTC</b>
-        </p>
-      </div>
-      <br />
-      <br />
-      <b>
-        {{ $t('page.partner_api.text-5') }}
-      </b>
-      <br />
-      <br />
-      <div>
-        <b>XML</b>
-        <p>{{ $rest.servicePath }}/export/xml/:code</p>
-        <b>JSON</b>
-        <p>{{ $rest.servicePath }}/export/json/:code</p>
-        <b>TXT</b>
-        <p>{{ $rest.servicePath }}/export/txt/:code</p>
+        <div>
+          <b>XML</b>
+          <p>{{ $rest.servicePath }}/export/xml/:code</p>
+          <b>JSON</b>
+          <p>{{ $rest.servicePath }}/export/json/:code</p>
+          <b>TXT</b>
+          <p>{{ $rest.servicePath }}/export/txt/:code</p>
+        </div>
       </div>
     </div>
+
     <div class="container p20">
       <h4 class="title">
         {{ $t('page.partner_api.subtitle-2') }}
@@ -78,16 +79,16 @@
         URL: {{ $rest.servicePath }}/partner/api.php
         <br />
         <br />
-        <div v-html="$t('page.partner_api.text-9')"></div>
-        
+      <div v-html="$t('page.partner_api.text-9')"></div>
+
       <!--   <b>Передаваемые GET параметрами:</b> <br /><br />
         <code>api_action</code> – pp <br />
         <code>api_key</code> – ваш личный ключ <br />
         <code>method</code> – метод АПИ модуля
        -->
-        <br />
-        <br />
-        {{ $t('page.partner_api.text-10') }}
+      <br />
+      <br />
+      {{ $t('page.partner_api.text-10') }}
       </p>
 
 
@@ -290,17 +291,17 @@
 <script>
 export default {
   head() {
-    const {meta, title} = this.$seo({
+    const { meta, title } = this.$seo({
       name: this.$i18n.t("meta.partners_system.title"),
       title: this.$i18n.t("meta.partners_system.title"),
       description: this.$i18n.t("meta.partners_system.description"),
       openGraph: {
         title: this.$i18n.t("meta.partners_system.title"),
         description: this.$i18n.t("meta.partners_system.description"),
-        image: {url: this.$rest.baseUrl + this.$rest.faviconPath}
+        image: { url: this.$rest.baseUrl + this.$rest.faviconPath }
       }
     });
-    return {meta, title};
+    return { meta, title };
   },
   computed: {
     lang() {

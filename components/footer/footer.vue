@@ -70,9 +70,9 @@
             </ul>
           </div>
           <div class="footer_right">
-            <div class="footer-title">Час роботи</div>
+            <div class="footer-title">{{ $t("ui.header.time_top") }}</div>
             <div class="footer-time">08:00 - 19:00</div>
-            <div class="footer-week">Без вихідних</div>
+            <div class="footer-week">{{ $t("ui.header.time_bot") }}</div>
           </div>
         </div>
       </div>

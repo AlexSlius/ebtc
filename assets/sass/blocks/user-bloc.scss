@@ -1,4 +1,3 @@
-
 .user-bloc {
 
   max-width: 270px;
@@ -83,23 +82,11 @@
       }
 
       z-index: 1;
-
-      //&-item {
-      //  pointer-events: none;
-      //  height: 44px;
-      //  //padding: 6.5px;
-      //  //margin: 3px;
-      //  position: absolute;
-      //  top: 50%;
-      //  //-webkit-border-radius: 50%;
-      //  //-moz-border-radius: 50%;
-      //  //border-radius: 50%;
-      //}
-
     }
 
     &-info {
       color: #ffffff;
+
       @include respond-to(phone) {
         display: none;
       }
@@ -123,43 +110,28 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    box-shadow: 0 25px 50px 0 rgba(23, 22, 37, 0.15);
+    box-shadow: 6px 8px 17px -9px #000;
     position: absolute;
     width: 100%;
     right: 0;
     top: -110%;
-
+    min-width: 270px;
     opacity: 0;
     visibility: hidden;
     z-index: 0;
-
-    -webkit-transition: .35s all;
-    -moz-transition: .35s all;
-    -ms-transition: .35s all;
-    -o-transition: .35s all;
     transition: .35s all;
-
-    &:after {
-      content: '';
-      position: absolute; /* Абсолютное позиционирование */
-      right: 20px;
-      top: -20px; /* Положение треугольника */
-      border: 10px solid transparent; /* Прозрачные границы */
-      border-bottom: 10px solid #ffffff; /* Добавляем треугольник */
-    }
   }
 
   .user-bloc-list-open {
     opacity: 1;
     visibility: visible;
-    top: 110%;
+    top: 140%;
     z-index: 11;
     min-width: 270px;
 
     @include respond-to(phone) {
       min-width: 200px;
     }
-
   }
 
   li {
@@ -183,10 +155,10 @@
       display: flex;
       align-items: center;
       font-size: 15px;
+
       @include respond-to(phone) {
         padding: 10px;
         font-size: 13px;
-
       }
 
       &:hover {
@@ -213,6 +185,7 @@
       width: 100%;
       margin-right: 15px;
       opacity: .5;
+
       @include respond-to(phone) {
         max-width: 25px;
 

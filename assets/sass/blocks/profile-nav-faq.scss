@@ -49,7 +49,7 @@
 
     &:hover,
     &.profile-nav-active {
-      color: $primary;
+      color: #fff;
       font-family: $ffRoboto_Medium;
     }
   }
@@ -170,17 +170,14 @@
   }
 
   a {
-    //display: flex;
-    //align-items: center;
     font-family: $ffRoboto_Regular;
     font-size: 15px;
     color: $dark;
 
     &:hover,
     &.profile-nav-active {
-      color: $primary;
+      color: #fff;
       font-family: $ffRoboto_Medium;
-
     }
   }
 

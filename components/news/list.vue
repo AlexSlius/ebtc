@@ -95,9 +95,6 @@ export default {
     lang() {
       this.getNewsFull({ lang: this.$root.$i18n.locale, limit: this.limit });
     },
-    news(newNews) {
-      console.log("newNews: ", newNews);
-    },
   },
   created() {
     this.getNewsFull({ lang: this.$root.$i18n.locale, limit: this.limit });

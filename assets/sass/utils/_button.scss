@@ -39,10 +39,10 @@
 
   &-blue {
     color: #ffffff;
-    background: $primary;
+    background: linear-gradient(97deg, #0FF -10.46%, #00C8E0 77.33%, #0096A5 153.11%);
 
     &:hover {
-      background: $primary-h;
+      opacity: 0.8;
     }
   }
 
@@ -66,19 +66,19 @@
   margin: 0;
   cursor: pointer;
   white-space: normal;
+  color: #ffffff;
 
   @include respond-to(phone) {
     font-size: 12px;
     padding: 8px 8px;
-
   }
 
   &-blue {
     color: #ffffff;
-    background: $primary;
+    background: linear-gradient(97deg, #0FF -10.46%, #00C8E0 77.33%, #0096A5 153.11%);
 
     &:hover {
-      background: $primary-h;
+      opacity: 0.8;
     }
   }
 
@@ -238,13 +238,11 @@
 .btn-bord {
   border: 2px solid #f0f1f2;
   background: transparent;
-  color: $primary;
+  color: #ffffff;
   line-height: 2.7;
 
   &:hover {
-    color: #ffffff;
-    background: $primary;
-    border-color: $primary;
+    opacity: 0.7;
   }
 }
 

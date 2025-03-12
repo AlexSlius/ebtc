@@ -1,5 +1,5 @@
 .container-aff {
-  margin: 3rem 3.6rem;
+  margin: 1rem 3.6rem;
   display: flex;
   flex-direction: column;
   @include respond-to(phone) {
@@ -45,6 +45,7 @@
     .title {
       font-size: 24px;
       font-family: $ffPlay_Bold;
+      color: #282E38;
     }
   }
 
@@ -71,7 +72,7 @@
   li {
     flex: 0 0 auto;
     @include col(3.4, 12, 285, 1.875, .45, .45, .8, .9);
-    border: 1px solid #e6e6e6;
+    border: 1px solid #fff;
 
     @include respond-to(phone) {
       min-width: 300px;
@@ -85,10 +86,10 @@
         align-items: center;
         justify-content: space-between;
         padding: 5px 10px;
-        border-top: 1px dashed #CED3E6;
+        border-top: 1px dashed #fff;
 
         &:last-child {
-          border-bottom: 1px dashed #CED3E6;
+          border-bottom: 1px dashed #fff;
         }
       }
     }
@@ -127,7 +128,7 @@
 
 
   &-title {
-    color: #9f9f9f;
+    color: #282E38;
     font-size: 15px;
     font-family: $ffRoboto_Light;
     margin-bottom: 1.875rem;
@@ -135,6 +136,7 @@
   }
 
   &-cost {
+    color: #282E38;
     font-size: 52px;
     font-family: $ffPlay_Light;
     margin-bottom: 1.875rem;
@@ -184,13 +186,13 @@
     margin-left: 52px;
     @include respond-to(phone) {
       margin-left: 0px;
-
     }
 
     p {
       margin-top: 10px;
       font-family: $ffRoboto_Light;
       font-size: 15px;
+      color: #282E38;
     }
   }
 
@@ -204,6 +206,10 @@
       align-items: center;
     }
 
+    p {
+      color: #282E38;
+    }
+
     > div {
       width: 42.7%;
       margin-right: 24px;
@@ -215,7 +221,7 @@
     }
 
     .current-link {
-      background-color: $primary;
+      background-color: #7a91c1;
       color: #FFFFFF;
     }
 

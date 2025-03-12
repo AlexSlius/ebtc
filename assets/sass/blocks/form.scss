@@ -19,17 +19,8 @@
       width: 56.4%;
       font-size: 20px;
       height: 64px;
-      padding: 23px 77px !important;
-      -webkit-box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-      -moz-box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-      box-shadow: 0px 20px 40px 0 rgba(23, 22, 37, 0.15);
-
-      background: $primary;
-
-      &:hover {
-        color: #FFFFFF;
-        background: $primary-h;
-      }
+      background: linear-gradient(139deg, #0FF 19.54%, #00C8E0 52.33%, #0096A5 85.11%);
+      color: #FFFFFF;
 
       @include respond-to(phone) {
         padding: 23px 44px !important;
@@ -114,14 +105,19 @@
     font-size: 15px;
 
     &-transparent {
-      color: $dark-gray;
-      border: 1px solid #e1e7ed;
+      color: #282E38;
+      border: 1px solid #fff;
+
+      &:hover {
+        background: #fff;
+      }
     }
   }
 }
 
 .order-main-block {
   display: flex;
+  background: #FBFBFC;
 
   @include respond-to(phone) {
     flex-direction: column;
@@ -152,17 +148,16 @@
       justify-content: space-between;
       border-bottom: $border-order;
       padding: 22px 32px;
+
+      p {
+        color: #fff;
+      }
     }
 
     &_content {
       display: flex;
       justify-content: center;
       padding: 24px 32px;
-
-      @include respond-to(phone) {
-        //padding: 32px 0px;
-
-      }
 
       &_header {
         text-align: center;
@@ -201,8 +196,7 @@
   }
 
   .form-left-block {
-    background-color: #FBFBFC;
-    //border-radius: 0px 0px 5px 0px;
+    background-color: #F0F1F6;
     flex: 0.4;
     border-right: $border-order;
 
@@ -241,6 +235,7 @@
 
     .detail-id {
       font-size: 16px;
+      color: #88919f;
 
       p {
         color: $dark-gray;
@@ -254,13 +249,24 @@
       display: flex;
       justify-content: space-between;
 
+      p {
+        color: #88919f;
+      }
+
       &-from {
         color: $dark-gray;
+
+        p {
+          color: #88919f;
+        }
+
+        span {
+          color: #282E38;
+        }
       }
 
       &:first-child {
         border-bottom: 1px solid #cdd0d8;
-        //margin: 25px 0px;
       }
 
       >p,
@@ -330,7 +336,7 @@
   background: #cce5ff;
   border-radius: 30px;
   width: 105%;
-  margin: 2.25rem auto 3.75em;
+  margin: 2.25rem auto 0;
   overflow: hidden;
 
   @media screen and (max-width: 1024px) {
@@ -367,7 +373,6 @@
   }
 
   &-attention {
-    background: #f1fbe2;
     text-align: left;
     padding: 1px 0px;
     color: $dark-gray;
@@ -496,6 +501,12 @@
   }
 }
 
+.form-manual-must {
+  p {
+    color: #fff;
+  }
+}
+
 .payment-wait {
   min-height: 100vh;
 
@@ -537,4 +548,27 @@
     margin-top: 16px;
     font-size: 20px;
   }
+}
+
+.form-confirmation {
+  .payment-data_date {
+    p {
+      color: #88919f;
+    }
+  }
+
+  .payment-data_header p {
+    color: #88919f;
+  }
+
+  .details-confirm-order-currency,
+  .form-v2--input-order-form {
+    p {
+      color: #88919f;
+    }
+  }
+}
+
+.form-v2--input-order-form .other {
+  color: #88919f;
 }

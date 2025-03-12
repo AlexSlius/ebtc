@@ -8,16 +8,16 @@
     }
 
     h1 {
-      color: $dark;
+      color: $default-text;
 
       span {
-        color: $primary;
+        color: $default-text;
       }
     }
   }
 
   &-confirmation {
-    padding-bottom: 5.5em;
+    padding-bottom: 0;
     @include respond-to(phone) {
       padding-bottom: 0.5em
     }
