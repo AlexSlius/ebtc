@@ -17,10 +17,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 80px;
+    gap: 14px;
 
     @include respond-to(phone) {
       justify-content: center;
     }
+
+
   }
 
   li {
@@ -64,6 +67,10 @@
     @include respond-to(phone) {
       justify-content: center;
     }
+
+    @media(max-width: 768px) {
+      gap: 14px;
+    }
   }
 
   li {
@@ -73,8 +80,9 @@
     flex: 1 0;
     max-width: 31.2%;
 
-    @include respond-to(tablet) {
-      max-width: 48%;
+    @media(max-width: 1024px) {
+      width: 29.2%;
+      min-width: 29.2%;
     }
   }
 
@@ -233,18 +241,6 @@
 }
 
 .news-bloc {
-  &::after {
-    content: url("~assets/img/top-waves.svg");
-    top: 0;
-    bottom: 0;
-    right: 0;
-  }
-
-  &::before {
-    content: url("~assets/img/right-waves.svg");
-    left: 0;
-    bottom: -59.9%;
-  }
 
   background: transparent;
   padding-top: 0;
@@ -352,6 +348,10 @@
 
 .news-bloc_new {
   margin-top: 80px;
+
+  @media(max-width: 1023px) {
+    margin-top: 40px;
+  }
 }
 
 .news-bloc .news-item {
@@ -373,6 +373,10 @@
   max-height: 41px;
   height: 41px;
   font-weight: 300;
+
+  @media(max-width: 768px) {
+    max-height: 35px;
+  }
 }
 
 .news-bloc-wr-link {
@@ -435,11 +439,70 @@
       width: 100%;
       height: 100%;
     }
+
+    @media(max-width: 1024px) {
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+    }
   }
 
   p {
     color: $white;
     font-size: 18px;
     font-weight: 500;
+
+    @media(max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .reviews-bloc {
+    ul {
+      li {
+        width: calc(50% - 14px);
+        max-width: calc(50% - 14px);
+        flex: auto;
+      }
+    }
+  }
+
+  .news-bloc_new {
+    ul {
+      li {
+        width: calc(50% - 14px);
+        max-width: calc(50% - 14px);
+        flex: auto;
+      }
+    }
+  }
+
+  .news-bloc li {
+    width: 43.2%;
+    min-width: 46.2%;
+}
+}
+
+@media(max-width: 476px) {
+  .reviews-bloc {
+    ul {
+      gap: 40px;
+
+      li {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .news-bloc_new {
+    ul {
+      li {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
   }
 }

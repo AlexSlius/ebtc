@@ -58,6 +58,11 @@
           flex: 1 1 auto;
         }
       }
+
+      @media (max-width: 1024px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     &-right {

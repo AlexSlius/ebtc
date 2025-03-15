@@ -77,3 +77,22 @@
     margin: 14px 0;
   }
 }
+
+@media(max-width: 1024px) {
+  .faq-qst-title {
+    padding: 17px 40px 17px 11px;
+    font-size: 14px;
+    line-height: 1.4;
+
+    .faq-qst-arr {
+      width: 20px;
+      height: 20px;
+      right: 10px;
+    }
+  }
+
+  .b-toggle {
+    padding: 10px;
+  }
+
+}

@@ -21,3 +21,15 @@
         gap: 10px;
     }
 }
+
+@media(max-width: 1024px) {
+    .fags-home {
+        margin-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .fags-items {
+        margin-top: 40px;
+    }
+}
+

@@ -17,6 +17,11 @@
     border-radius: 30px;
     border: 1px solid #7A83B9;
     background: radial-gradient(119.42% 191.45% at 101.5% 163.31%, rgba(75, 78, 132, 0.80) 10.06%, rgba(16, 15, 55, 0.80) 74.96%);
+
+    @media(max-width: 768px) {
+        padding: 12px;
+        border-radius: 10px;
+    }
 }
 
 .v4c-form_tow {
@@ -33,6 +38,11 @@
         img {
             width: 42px;
             height: 42px;
+
+            @media (max-width: 768px) {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
@@ -49,6 +59,10 @@
             color: #0c0c0c;
             font-size: 16px;
             color: $white;
+
+            @media(max-width: 768px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -57,6 +71,10 @@
     color: $white;
     font-size: 17px;
     font-weight: 700;
+
+    @media(max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .v4c-for_row_d {
@@ -130,6 +148,10 @@ input.v4c-form-intput {
     &::-moz-placeholder {
         color: $white;
     }
+
+    @media(max-width: 768px) {
+        font-size: 18px;
+    }
 }
 
 .v4c-form-type {
@@ -148,6 +170,12 @@ input.v4c-form-intput {
         padding: 6px;
         border-radius: 4px;
         border: 1px solid #3B406D;
+
+        @media(max-width: 768px) {
+            width: 31px;
+            min-width: 30px;
+            height: 30px;
+        }
     }
 }
 
@@ -186,6 +214,10 @@ input.v4c-form-intput {
 
     &:hover {
         opacity: 0.8;
+    }
+
+    @media(max-width: 768px) {
+        margin-left: 0;
     }
 }
 
@@ -346,7 +378,7 @@ input.v4c-form-intput {
     }
 
     &:hover {
-        opacity: 0.8!important;
+        opacity: 0.8 !important;
     }
 
     &:disabled {
@@ -417,7 +449,8 @@ input.v4c-form-intput {
         gap: 40px;
         color: $text-default;
 
-        h3, p {
+        h3,
+        p {
             color: $text-default;
         }
 
@@ -464,5 +497,11 @@ input.v4c-form-intput {
                 width: 30px;
             }
         }
+    }
+}
+
+@media(max-width: 768px) {
+    input.v4c-form-intput {
+        max-width: 110px;
     }
 }

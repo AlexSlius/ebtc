@@ -12,4 +12,19 @@
   flex: 1 0 auto;
   min-width: 200px;
   width: 40%;
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
+}
+
+
+@media(max-width: 991px) {
+  .popup .d-flex__col {
+    margin:  0;
+  }
+
+  .popup .d-flex__col > div {
+    margin: 0;
+  }
 }

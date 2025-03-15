@@ -12,10 +12,6 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-
-      @include respond-to(phone) {
-        flex-direction: column;
-      }
     }
 
     li {
@@ -25,14 +21,17 @@
       flex: 1 1;
       border-radius: 12px;
       background: #140F26;
+
+      @media(max-width: 1024px) {
+        min-width: 120px;
+        padding: 12px;
+        max-width: 140px;
+        flex: auto;
+      }
     }
 
     img {
       width: 100%;
-
-      @include respond-to(phone) {
-        max-width: 240px;
-      }
     }
   }
 }

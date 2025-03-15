@@ -102,7 +102,7 @@ h2 {
   }
 
   @include respond-to(tablet) {
-    max-width: 720px;
+    max-width: 90%;
   }
 
   @include respond-to(phone) {
@@ -290,4 +290,8 @@ textarea {
   font-weight: 700;
   color: $white;
   text-align: center;
+}
+
+.pages {
+  overflow: hidden;
 }
