@@ -1,12 +1,10 @@
 <template>
   <div class="exchangeform-step-2-page">
     <div class="under-header">
-      <div class="form-confirmation">
+      <div class="form-confirmation form-confirmation_page">
         <div v-if="currentRoute && currentRoute.routeId" class="container--form">
-          <h1
-            v-if="currentRoute.seo && (currentRoute.seo.h1 || currentRoute.seo.title)"
-            class="text-center"
-          >{{ currentRoute.seo.h1 || currentRoute.seo.title }}</h1>
+          <h1 v-if="currentRoute.seo && (currentRoute.seo.h1 || currentRoute.seo.title)" class="text-center">{{
+            currentRoute.seo.h1 || currentRoute.seo.title }}</h1>
           <h1 v-else class="text-center">
             {{
               $t("page.main.details.instructionTitle", {
@@ -15,10 +13,8 @@
               })
             }}
           </h1>
-          <h2
-            v-if="currentRoute.seo && (currentRoute.seo.h2 || currentRoute.seo.subtitle)"
-            class="text-center"
-          >{{ currentRoute.seo.h2 || currentRoute.seo.subtitle }}</h2>
+          <h2 v-if="currentRoute.seo && (currentRoute.seo.h2 || currentRoute.seo.subtitle)" class="text-center">{{
+            currentRoute.seo.h2 || currentRoute.seo.subtitle }}</h2>
           <h2 v-else class="text-center">{{ $t("page.main.descr") }}</h2>
           <form class="form">
 
@@ -38,13 +34,9 @@
               {{ $t("page.main.details.needVerifCurrency") + " " }}
               {{ currentRoute.to.name + " " + currentRoute.to.symbol }}
             </div>
-            
-            <div
-              v-for="instruction in instructions"
-              :key="instruction._id"
-              class="form-attention"
-              v-html="instruction.content"
-            />
+
+            <div v-for="instruction in instructions" :key="instruction._id" class="form-attention"
+              v-html="instruction.content" />
             <div class="exchangeform-step-2">
               <div class="form-v2">
                 <!--Block give-->
@@ -58,33 +50,22 @@
                       <span class="label" />
                       <div class="exchangeform__date">
                         <span class="exchangeform__date-icon">
-                          <img
-                            :src="$rest.urlImg(currentRoute.from.image).small"
-                            alt="Icon currency take"
-                          />
+                          <img :src="$rest.urlImg(currentRoute.from.image).small" alt="Icon currency take" />
                         </span>
-                        <p
-                          class="exchangeform__date-name"
-                        >{{ currentRoute.from.name + " " + currentRoute.from.symbol }}</p>
+                        <p class="exchangeform__date-name">{{ currentRoute.from.name + " " + currentRoute.from.symbol }}
+                        </p>
                       </div>
                     </div>
                     <div class="form-v2--input">
                       <span class="label">{{ $t("page.main.details.amount") }} *</span>
-                      <input
-                        v-model="val1"
-                        :style="{color: val1 === 'incorrect_data' ? 'red' : ''}"
-                        type="text"
-                        placeholder="0.00"
-                        @input="correctTo"
-                      />
+                      <input v-model="val1" :style="{ color: val1 === 'incorrect_data' ? 'red' : '' }" type="text"
+                        placeholder="0.00" @input="correctTo" />
                       <div>
                         <p v-if="currentRoute.from.min !== '0'">
                           {{ $t("page.main.from.min") + "&nbsp;" }}
                           <span>{{ fixedNumber("ceil", currentRoute.from.decimal, currentRoute.from.min) }}</span>
                         </p>
-                        <p
-                          v-if="currentRoute.from.min !== '0' && currentRoute.from.max !== '0'"
-                        >&nbsp;-&nbsp;</p>
+                        <p v-if="currentRoute.from.min !== '0' && currentRoute.from.max !== '0'">&nbsp;-&nbsp;</p>
                         <p v-if="currentRoute.from.max !== '0'">
                           {{ $t("page.main.from.max") + "&nbsp;" }}
                           <span>{{ fixedNumber("floor", currentRoute.from.decimal, currentRoute.from.max) }}</span>
@@ -92,31 +73,19 @@
                       </div>
                     </div>
                   </div>
-                  <div
-                    v-for="field in currentRoute.from.fields"
-                    :key="field.id"
-                    class="form-v2--input b-top m-top-18 p-top-16"
-                  >
+                  <div v-for="field in currentRoute.from.fields" :key="field.id"
+                    class="form-v2--input b-top m-top-18 p-top-16">
                     <span class="label">{{ field.name }} {{ field.required ? "*" : "" }}</span>
                     <div class="form-v2--number">
-                      <input
-                        v-model="fromValues[field._id]"
-                        :style="{
-                          border: !fromValues[field._id] || fromValues[field._id].match(field.regexp) ? '' : '1px solid red'
-                        }"
-                        :placeholder="field.placeholder"
-                      />
+                      <input v-model="fromValues[field._id]" :style="{
+                        border: !fromValues[field._id] || fromValues[field._id].match(field.regexp) ? '' : '1px solid red'
+                      }" :placeholder="field.placeholder" />
                       <span class="currency--symbol">
-                        <img
-                          :src="$rest.urlImg(currentRoute.from.image).small"
-                          alt="Icon currency take"
-                        />
+                        <img :src="$rest.urlImg(currentRoute.from.image).small" alt="Icon currency take" />
                       </span>
                     </div>
-                    <p
-                      v-if="fromValues[field._id] && !fromValues[field._id].match(field.regexp)"
-                      :style="{color: 'red'}"
-                    >{{ field.regexp_error }}</p>
+                    <p v-if="fromValues[field._id] && !fromValues[field._id].match(field.regexp)"
+                      :style="{ color: 'red' }">{{ field.regexp_error }}</p>
                   </div>
                 </div>
                 <!--Block get-->
@@ -130,16 +99,12 @@
                       <span class="label" />
                       <div class="exchangeform__date">
                         <span class="exchangeform__date-icon">
-                          <img
-                            :src="$rest.urlImg(currentRoute.to.image).small"
-                            alt="Icon currency give"
-                          />
+                          <img :src="$rest.urlImg(currentRoute.to.image).small" alt="Icon currency give" />
                         </span>
-                        <p
-                          class="exchangeform__date-name"
-                        >{{ currentRoute.to.name + " " + currentRoute.to.symbol }}</p>
+                        <p class="exchangeform__date-name">{{ currentRoute.to.name + " " + currentRoute.to.symbol }}</p>
                       </div>
-                      <p>
+                      <!-- TODO -->
+                      <p class="color-type-in color-type-in_t">
                         {{ $t("page.main.to.rate") }}
                         <span>{{ currentRoute.rate.in }}:</span>
                         <span>{{ currentRoute.rate.out }}</span>
@@ -147,73 +112,46 @@
                     </div>
                     <div class="form-v2--input">
                       <span class="label">{{ $t("page.main.details.amount") }} *</span>
-                      <input
-                        v-model="val2"
-                        :style="{color: limitAmount ? 'red' : ''}"
-                        type="text"
-                        placeholder="0.00"
-                        @input="correctFrom"
-                      />
-                      <p
-                        v-if="currentRoute && currentRoute.rate && currentRoute.rate.amount"
-                        :style="{color: limitAmount ? 'red' : ''}"
-                      >
+                      <input v-model="val2" :style="{ color: limitAmount ? 'red' : '' }" type="text" placeholder="0.00"
+                        @input="correctFrom" />
+                      <p v-if="currentRoute && currentRoute.rate && currentRoute.rate.amount"
+                        :style="{ color: limitAmount ? 'red' : '' }">
                         {{ $t("page.main.to.reserve") + "&nbsp;" }}
                         <span>{{ fixedNumber("floor", currentRoute.to.decimal, currentRoute.rate.amount) }}</span>
                       </p>
                     </div>
                   </div>
-                  <div
-                    v-for="field in currentRoute.to.fields"
-                    :key="field.id"
-                    class="form-v2--input b-top m-top-18 p-top-16"
-                  >
+                  <div v-for="field in currentRoute.to.fields" :key="field.id"
+                    class="form-v2--input b-top m-top-18 p-top-16">
                     <span class="label">{{ field.name }} {{ field.required ? "*" : "" }}</span>
                     <div class="form-v2--number">
-                      <input
-                        v-model="toValues[field._id]"
-                        :style="{
-                          border: !toValues[field._id] || toValues[field._id].match(field.regexp) ? '' : '1px solid red'
-                        }"
-                        :placeholder="field.placeholder"
-                      />
+                      <input v-model="toValues[field._id]" :style="{
+                        border: !toValues[field._id] || toValues[field._id].match(field.regexp) ? '' : '1px solid red'
+                      }" :placeholder="field.placeholder" />
                       <span class="currency--symbol">
-                        <img
-                          :src="$rest.urlImg(currentRoute.to.image).small"
-                          alt="Icon currency take"
-                        />
+                        <img :src="$rest.urlImg(currentRoute.to.image).small" alt="Icon currency take" />
                       </span>
                     </div>
-                    <p
-                      v-if="toValues[field._id] && !toValues[field._id].match(field.regexp)"
-                      :style="{color: 'red'}"
-                    >{{ field.regexp_error }}</p>
+                    <p v-if="toValues[field._id] && !toValues[field._id].match(field.regexp)" :style="{ color: 'red' }">
+                      {{
+                        field.regexp_error }}</p>
                   </div>
                 </div>
                 <!--Block personal date-->
                 <div class="dataInput">
-                  <div
-                    v-if="currentRoute.fields && currentRoute.fields.lenght >0"
-                    class="form--title"
-                  >
+                  <div v-if="currentRoute.fields && currentRoute.fields.lenght > 0" class="form--title">
                     <h4>{{ $t("page.main.details.personalData") }}</h4>
                     <img src="~assets/img/arr.svg" alt />
                   </div>
                   <div v-for="field in currentRoute.fields" :key="field.id" class="form-v2--input">
                     <span class="label">{{ field.name }} {{ field.required ? "*" : "" }}</span>
                     <div class="form-v2--number">
-                      <input
-                        v-model="routeValues[field._id]"
-                        :style="{
-                          border: !routeValues[field._id] || routeValues[field._id].match(field.regexp) ? '' : '1px solid red'
-                        }"
-                        :placeholder="field.placeholder"
-                      />
+                      <input v-model="routeValues[field._id]" :style="{
+                        border: !routeValues[field._id] || routeValues[field._id].match(field.regexp) ? '' : '1px solid red'
+                      }" :placeholder="field.placeholder" />
                     </div>
-                    <p
-                      v-if="routeValues[field._id] && !routeValues[field._id].match(field.regexp)"
-                      :style="{color: 'red'}"
-                    >{{ field.regexp_error }}</p>
+                    <p v-if="routeValues[field._id] && !routeValues[field._id].match(field.regexp)"
+                      :style="{ color: 'red' }">{{ field.regexp_error }}</p>
                   </div>
 
                   <div class="dataInput--label">
@@ -241,19 +179,13 @@
 
                   <loader v-if="!load" :responsive="true" width="100" height="100" />
 
-                  <button
-                    v-else
-                    class="btn btn-submit btn-submitForm"
-                    @click.prevent="currentRoute.routeId && create()"
-                  >{{ $t("page.main.details.submit") }}
+                  <button v-else class="btn btn-submit btn-submitForm"
+                    @click.prevent="currentRoute.routeId && create()">{{ $t("page.main.details.submit") }}
                   </button>
                 </div>
               </div>
-              <div
-                v-if="currentRoute.seo.instruction"
-                class="exchangeform-step-2--info b-top p-top-16"
-                v-html="currentRoute.seo.instruction"
-              />
+              <div v-if="currentRoute.seo.instruction" class="exchangeform-step-2--info b-top p-top-16"
+                v-html="currentRoute.seo.instruction" />
               <div v-else class="exchangeform-step-2--info b-top p-top-16">
                 <h3 class="info-title">
                   {{
@@ -293,24 +225,25 @@
   </div>
 </template>
 <script>
-import {mapActions, mapGetters, mapMutations} from "vuex";
-import {BigNumber} from "bignumber.js";
-import {localizeText, parseSeoText} from "@/plugins/localizeText";
+import { mapActions, mapGetters, mapMutations } from "vuex";
+import { BigNumber } from "bignumber.js";
+import { localizeText, parseSeoText } from "@/plugins/localizeText";
+import { watch } from "vue";
 
 export default {
   head() {
     if (!this.currentRoute || !this.currentRoute.seo) return {};
-    const {meta, title} = this.$seo({
+    const { meta, title } = this.$seo({
       title: this.currentRoute.seo.title,
       description: this.currentRoute.seo.description,
       openGraph: {
         title: this.currentRoute.seo.title,
         description: this.currentRoute.seo.description,
         content: this.currentRoute.seo.subtitle,
-        image: {url: this.$rest.fsPath + this.currentRoute.from.image.files[3].url, width: 100, height: 100}
+        image: { url: this.$rest.fsPath + this.currentRoute.from.image.files[3].url, width: 100, height: 100 }
       }
     });
-    return {meta, title};
+    return { meta, title };
   },
   data() {
     return {
@@ -333,14 +266,14 @@ export default {
       agree_kyc: false
     };
   },
-  async asyncData({params, app, seo, error}) {
+  async asyncData({ params, app, seo, error }) {
     const res = await app.$rest
       .api("GET:public/exchanger/route/get/one/by-friendlyURL", {
         friendlyURL: params.friendly_url,
         lang: app.i18n.locale
       })
       .catch(() => {
-        error({statusCode: 404, message: 'Page not found'})
+        error({ statusCode: 404, message: 'Page not found' })
         return null;
       });
 
@@ -371,7 +304,7 @@ export default {
   },
   computed: {
     ...mapGetters("exchange", ["info", "load"]),
-    ...mapGetters("user", {profile: "info"}),
+    ...mapGetters("user", { profile: "info" }),
 
     fromList() {
       let obj = {};
@@ -451,14 +384,13 @@ export default {
             return item.step === "createOrder";
           })
           .map(item => {
-            return {...item, content: localizeText(item.content, this.$i18n.locale)};
+            return { ...item, content: localizeText(item.content, this.$i18n.locale) };
           });
       } else {
         return [];
       }
     }
   },
-
   methods: {
     ...mapMutations({
       setLogin: "user/login",
@@ -496,10 +428,7 @@ export default {
       this.calculate("from");
     },
     correctFrom() {
-      let coef =
-        BigNumber(this.currentRoute.rate.out).dividedBy(
-          this.currentRoute.rate.in
-        ) || 1;
+      let coef = BigNumber(this.currentRoute.rate.out).dividedBy(this.currentRoute.rate.in) || 1;
       let num = BigNumber(this.val2 || 0)
         .plus(this.currentRoute.rate.outFeeAmount)
         .dividedBy(coef)
@@ -516,7 +445,7 @@ export default {
       this.val1 = num;
     },
     async create() {
-      let {routeId} = this.currentRoute;
+      let { routeId } = this.currentRoute;
       if (
         this.currentRoute.from.fields.some(
           el => el.required && !this.fromValues[el._id]
@@ -570,11 +499,11 @@ export default {
       if (!isOkVerification) return;
 
       let res = await this.createOrder(order).catch(async err => {
-        if(5001670807585394 === err.errorCode) {
+        if (5001670807585394 === err.errorCode) {
           await this.checkAndPassVerification(this.currentRoute, true);
           return;
         }
-        if(1601588666628861 === err.errorCode) {
+        if (1601588666628861 === err.errorCode) {
           if (this.$refs.recaptcha && this.$refs.recaptcha.reset) this.$refs.recaptcha.reset();
         }
         this.$swal("", err.message, "error");
@@ -601,10 +530,7 @@ export default {
         this.val2 = 0;
         return null;
       }
-      let coef =
-        BigNumber(this.currentRoute.rate.out).dividedBy(
-          this.currentRoute.rate.in
-        ) || 1;
+      let coef = BigNumber(this.currentRoute.rate.out).dividedBy(this.currentRoute.rate.in) || 1;
       let num = BigNumber(this.val1 || 0)
         .multipliedBy(coef)
         .minus(this.currentRoute.rate.outFeeAmount)
@@ -652,7 +578,7 @@ button.btn.btn-submit.btn-submitForm {
 }
 
 .form-v2--input input {
-  padding: 14px 30px;
+  padding: 14px 16px;
   color: #282E38;
   border-radius: 14px;
   height: 50px;

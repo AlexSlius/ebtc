@@ -434,7 +434,6 @@
   }
 
   h1 {
-    color: #000;
     font-size: 20px;
     font-weight: 900;
     line-height: 140%;
@@ -571,4 +570,79 @@
 
 .form-v2--input-order-form .other {
   color: #88919f;
+}
+
+.form-confirmation_page {
+  .form {
+    border-radius: 6px;
+  }
+
+  .form-attention {
+    padding: 14px 16px;
+
+    p {
+      color: $dark;
+    }
+  }
+
+  .form-v2 .receive {
+    padding: 20px 14px;
+  }
+
+  .form--title {
+    color: $dark;
+  }
+
+  .container--form {
+    h2 {
+      color: #D6E2F3 !important;
+    }
+  }
+
+  .form-v2--input {
+    .label {
+      color: #96989c;
+    }
+
+    p {
+      color: #96989c;
+    }
+
+    div {
+      p {
+        color: #96989c;
+      }
+    }
+  }
+
+  .form-v2--group {
+    .color-type-in {
+      color: #96989c;
+    }
+  }
+
+  .form-v2--input input {
+    font-size: 16px;
+  }
+
+  .dataInput--label {
+    max-width: 448px;
+
+    a {
+      color: #3f70f4;
+    }
+  }
+
+  .btn-submitForm {
+    margin-top: 25px;
+  }
+
+  .exchangeform-step-2--info {
+    font-size: 14px;
+
+    p,
+    ul {
+      font-size: 14px;
+    }
+  }
 }
